@@ -1,0 +1,15 @@
+﻿<Window x:Class="Football_History.Photos.Matches.UCL_matches._2018_2017.NapoliCity24"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Football_History.Photos.Matches.UCL_matches._2018_2017"
+        mc:Ignorable="d"
+        Title="NapoliCity24" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Football History;component/Photos/Matches/UCL/2018 2017/NapoliCity 24.PNG"/>
+        </Grid.Background>
+
+    </Grid>
+</Window>
