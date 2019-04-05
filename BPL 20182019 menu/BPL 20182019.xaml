@@ -1,0 +1,24 @@
+﻿<Window x:Class="Football_History.Photos.Matches.BPL_matches.BPL_20182019"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Football_History.Photos.Matches.BPL_matches"
+        mc:Ignorable="d"
+        Title="BPL" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Football History;component/Photos/BPL.jpg"/>
+        </Grid.Background>
+        <Button x:Name="button" Content="Go back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="10,10,0,0" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click" FontSize="16" FontWeight="Bold"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="203" VerticalAlignment="Top" Width="357" Margin="342,126,0,0" Opacity="0.9" Background="#FFB0FFDB">
+            <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected">Arsenal 4:2 Tottenham</ListBoxItem>
+            <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected0">Chealsea 2:0 Man City</ListBoxItem>
+            <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected_1">Man City 3:1 Arsenal</ListBoxItem>
+            <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected_2">Tottenham 1:3 Wolves</ListBoxItem>
+            <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected_3">Liverpool 2:1 Tottenham</ListBoxItem>
+            <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected_4">Man City 2:1 Liverpool</ListBoxItem>
+            <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected_5">Liverpool 4:3 Crystal Palace</ListBoxItem>
+        </ListBox>
+    </Grid>
+</Window>
