@@ -7,6 +7,26 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="Season UCL 2018/2019" Height="450" Width="800">
+          <Window.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Photos/ucl.jpg"/>
@@ -22,7 +42,7 @@
             <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected_6">Ajax 4:2 Real Madrid</ListBoxItem>
             <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected_7">Barcelona 5:1 Lyon</ListBoxItem>
         </ListBox>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Margin="10,10,0,0" Height="49" Click="Button_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button x:Name="button" Style="{Static Resouce MyButton}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Margin="10,10,0,0" Height="49" Click="Button_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="Photos/home.png"/>
             </Button.Background>
