@@ -6,11 +6,31 @@
         xmlns:local="clr-namespace:Football_History.Photos.Matches.BPL_matches"
         mc:Ignorable="d"
         Title="BPL" Height="450" Width="800">
+          <Window.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Football History;component/Photos/BPL.jpg"/>
         </Grid.Background>
-        <Button x:Name="button" Content="Go back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="10,10,0,0" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="button" Style="{Static Resource MyButton}" Content="Go back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="10,10,0,0" Height="32" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="Button_Click" FontSize="16" FontWeight="Bold"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="203" VerticalAlignment="Top" Width="357" Margin="342,126,0,0" Opacity="0.9" Background="#FFB0FFDB">
             <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected">Arsenal 4:2 Tottenham</ListBoxItem>
             <ListBoxItem FontSize="18" HorizontalAlignment="Center" Selected="ListBoxItem_Selected0">Chealsea 2:0 Man City</ListBoxItem>
